@@ -1,7 +1,7 @@
 #/usr/bin/python3
 GPIO_NUM = 23
 COLUMN_LEN = 16
-COLUMN_GAP = 14
+COLUMN_GAP = 30
 
 
 def read_file():
@@ -10,7 +10,7 @@ def read_file():
     while 1:
         for i in range(GPIO_NUM):
             count = count + 1
-            if count >= GPIO_NUM * COLUMN_LEN:
+            if count > GPIO_NUM * COLUMN_LEN:
                 return
             line = file.readline()
             if not line:
